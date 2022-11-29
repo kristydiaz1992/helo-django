@@ -26,7 +26,7 @@ SECRET_KEY = 'matxp6k!wbkmdlk)97)ew2qr%&9nr=n#v_-+v#yel4^r&czf7q'
 DEBUG = True
 
 # A list of strings representing the host/domain names that this Django site can serve.
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh','*']
 
 
 # Application definition
@@ -122,4 +122,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
